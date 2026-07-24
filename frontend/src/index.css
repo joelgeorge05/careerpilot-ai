@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  background-color: #0E1116;
+  color: #E8EAED;
+  font-family: 'Inter', sans-serif;
+}
+
+/* thin instrument-style scrollbar for the readout panels */
+.readout::-webkit-scrollbar {
+  width: 8px;
+}
+.readout::-webkit-scrollbar-track {
+  background: transparent;
+}
+.readout::-webkit-scrollbar-thumb {
+  background-color: #2A3240;
+  border-radius: 4px;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.2; }
+}
+.pulse-dot {
+  animation: blink 1.2s ease-in-out infinite;
+}
+
+:focus-visible {
+  outline: 2px solid #F2A93B;
+  outline-offset: 2px;
+}
